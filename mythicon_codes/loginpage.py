@@ -22,7 +22,7 @@ def loginbutton():
     if results:
         messagebox.showinfo('','Login Successful!')
         uname = username
-        f=open(r'E:/New folder/MYTHICON/mythicon_others/username.txt','w')
+        f=open('mythicon_others/username.txt','w')
         f.write(uname)
         f.close()
         root.destroy()
@@ -64,15 +64,15 @@ canvas = Canvas(frame, bg="black",width=739,height=415)
 canvas.pack()
 #sound
 pygame.mixer.init()# initialise the pygame
-pygame.mixer.music.load(r"E:/New folder/MYTHICON/mythicon_sounds/skyrain.wav")
+pygame.mixer.music.load("mythicon_sounds/skyrain.wav")
 pygame.mixer.music.play(-1)
 #images
-bg_image = PhotoImage(file = r"E:\New folder\MYTHICON\mythicon_images\peakpx.png")
-username_image=PhotoImage(file = r"E:\New folder\MYTHICON\mythicon_images\uname.png")
-password_image=PhotoImage(file = r"E:\New folder\MYTHICON\mythicon_images\pasword.png")
-login_image=PhotoImage(file = r"E:\New folder\MYTHICON\mythicon_images\login.png")
-register_image=PhotoImage(file = r"E:\New folder\MYTHICON\mythicon_images\register.png")
-loginpg_image=PhotoImage(file = r"E:\New folder\MYTHICON\mythicon_images\loginpage.png")
+bg_image = PhotoImage(file = "mythicon_images\peakpx.png")
+username_image=PhotoImage(file = "mythicon_images\uname.png")
+password_image=PhotoImage(file = "mythicon_images\pasword.png")
+login_image=PhotoImage(file = "mythicon_images\login.png")
+register_image=PhotoImage(file = "mythicon_images\register.png")
+loginpg_image=PhotoImage(file = "mythicon_images\loginpage.png")
 #Show bg using canvas
 canvas.create_image(369.5,207.5,image=bg_image)
 #heading login page

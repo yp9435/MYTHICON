@@ -7,7 +7,7 @@ import mysql.connector
 
 #highscore####
 #login-info
-f=open(r'E:/New folder/MYTHICON/mythicon_others/username.txt')
+f=open('mythicon_others/username.txt')
 username=f.read()
 f.close()
 #connecting to mysql for old-highscore
@@ -91,7 +91,7 @@ pygame.init()
 screen= pygame.display.set_mode((739,415))
 pygame.display.set_caption('MYTHICON')
 clock = pygame.time.Clock()
-game_font = pygame.font.Font(r'E:/New folder/MYTHICON/mythicon_others/ka1.ttf',20)
+game_font = pygame.font.Font('mythicon_others/ka1.ttf',20)
 
 #game variables######
 gravity = 0.25
@@ -103,27 +103,27 @@ score = 0
 high_score = oldhighscore
 
 #bg
-bg_surface = pygame.image.load('E:\\New folder\\MYTHICON\\mythicon_images\\yell.jpg').convert()
+bg_surface = pygame.image.load('mythicon_images\yell.jpg').convert()
 
 #bg music
-mixer.music.load(r'E:\New folder\MYTHICON\mythicon_sounds\valley.wav')
+mixer.music.load('mythicon_sounds\valley.wav')
 mixer.music.play(-1)
 
 #floor
-floor_surface = pygame.image.load('E:\\New folder\\MYTHICON\\mythicon_images\\refloor.png').convert_alpha()
+floor_surface = pygame.image.load('mythicon_images\refloor.png').convert_alpha()
 floor_x_pos = 0
 
 #dragon
-drag0 = pygame.image.load('E:\\New folder\\MYTHICON\\mythicon_images\\drag\\drag0.png').convert_alpha()
-drag1 = pygame.image.load('E:\\New folder\\MYTHICON\\mythicon_images\\drag\\drag1.png').convert_alpha()
-drag2 = pygame.image.load('E:\\New folder\\MYTHICON\\mythicon_images\\drag\\drag2.png').convert_alpha()
-drag3 = pygame.image.load('E:\\New folder\\MYTHICON\\mythicon_images\\drag\\drag3.png').convert_alpha()
-drag4 = pygame.image.load('E:\\New folder\\MYTHICON\\mythicon_images\\drag\\drag4.png').convert_alpha()
-drag5 = pygame.image.load('E:\\New folder\\MYTHICON\\mythicon_images\\drag\\drag5.png').convert_alpha()
-drag6 = pygame.image.load('E:\\New folder\\MYTHICON\\mythicon_images\\drag\\drag6.png').convert_alpha()
-drag7 = pygame.image.load('E:\\New folder\\MYTHICON\\mythicon_images\\drag\\drag7.png').convert_alpha()
-drag8 = pygame.image.load('E:\\New folder\\MYTHICON\\mythicon_images\\drag\\drag8.png').convert_alpha()
-drag9 = pygame.image.load('E:\\New folder\\MYTHICON\\mythicon_images\\drag\\drag9.png').convert_alpha()
+drag0 = pygame.image.load('mythicon_images\drag\drag0.png').convert_alpha()
+drag1 = pygame.image.load('mythicon_images\drag\drag1.png').convert_alpha()
+drag2 = pygame.image.load('mythicon_images\drag\drag2.png').convert_alpha()
+drag3 = pygame.image.load('mythicon_images\drag\drag3.png').convert_alpha()
+drag4 = pygame.image.load('mythicon_images\drag\drag4.png').convert_alpha()
+drag5 = pygame.image.load('mythicon_images\drag\drag5.png').convert_alpha()
+drag6 = pygame.image.load('mythicon_images\drag\drag6.png').convert_alpha()
+drag7 = pygame.image.load('mythicon_images\drag\drag7.png').convert_alpha()
+drag8 = pygame.image.load('mythicon_images\drag\drag8.png').convert_alpha()
+drag9 = pygame.image.load('mythicon_images\drag\drag9.png').convert_alpha()
 
 dragon_frames = [drag0,drag1,drag2,drag3,drag4,drag5,drag6,drag7,drag8,drag9]
 dragon_index = 0
@@ -134,26 +134,26 @@ DRAGONFLAP = pygame.USEREVENT +2
 pygame.time.set_timer(DRAGONFLAP,100)
 
 #cloudb
-cloudb_surface = pygame.image.load('E:\\New folder\\MYTHICON\\mythicon_images\\black.png').convert_alpha()
+cloudb_surface = pygame.image.load('mythicon_images\black.png').convert_alpha()
 cloudb_list =[]
 SPAWNCLOUDB = pygame.USEREVENT
 pygame.time.set_timer(SPAWNCLOUDB,2400)
 cloudb_height = [70,110,200]
  
 #cloudw
-cloudw_surface = pygame.image.load('E:\\New folder\\MYTHICON\\mythicon_images\\white.png').convert_alpha()
+cloudw_surface = pygame.image.load('mythicon_images\white.png').convert_alpha()
 cloudw_list = []
 SPAWNCLOUDW = pygame.USEREVENT +1
 pygame.time.set_timer(SPAWNCLOUDW,2400)
 cloudw_height = [20,170,250]
 
 #game over
-game_over_surface= pygame.image.load('E:\\New folder\\MYTHICON\\mythicon_images\\game over.png').convert_alpha()
+game_over_surface= pygame.image.load('mythicon_images\game over.png').convert_alpha()
 game_over_rect = game_over_surface.get_rect(center =(369,207))
 
 #sounds
-flap_sound = pygame.mixer.Sound(r'E:\New folder\MYTHICON\mythicon_sounds\sfx_wing.wav')
-death_sound = pygame.mixer.Sound(r'E:\New folder\MYTHICON\mythicon_sounds\dragon_roar_hit.wav')
+flap_sound = pygame.mixer.Sound('mythicon_sounds\sfx_wing.wav')
+death_sound = pygame.mixer.Sound('mythicon_sounds\dragon_roar_hit.wav')
 
 #main game loop####
 while True:
