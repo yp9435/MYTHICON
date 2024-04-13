@@ -32,8 +32,8 @@ frame.pack()
 canvas = Canvas(frame, bg="black",width=739,height=415)
 canvas.pack()
 #images
-bg_surface= PhotoImage(file =('mythicon_images\pink.png'))
-title_image=PhotoImage(file = ('mythicon_images\title.png'))
+bg_surface= PhotoImage(file =('mythicon_images/pink.png'))
+title_image=PhotoImage(file = ('mythicon_images/title.png'))
 
 #open file username
 f=open('mythicon_others/username.txt','r')

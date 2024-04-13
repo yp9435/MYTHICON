@@ -21,9 +21,9 @@ frame.pack()
 canvas = Canvas(frame, bg="black",width=739,height=415)
 canvas.pack()
 #images
-bg_surface= PhotoImage(file =('mythicon_images\lbinbg.png'))
-lb_surface= PhotoImage(file =('mythicon_images\board2.png'))
-back_surface=PhotoImage(file=("mythicon_images\back.png"))
+bg_surface= PhotoImage(file =(r'mythicon_images/lbinbg.png'))
+lb_surface= PhotoImage(file =(r'mythicon_images/board2.png'))
+back_surface=PhotoImage(file=(r"mythicon_images/back.png"))
 canvas.create_image(369.5,207.5,image=bg_surface)
 canvas.create_image(450.5,240,image=lb_surface)
 
@@ -53,7 +53,7 @@ for i in range(5):
     y+=42
     
 #printing the user's personal highscore
-f=open('mythicon_others/username.txt','r')
+f=open(r'mythicon_others/username.txt','r')
 username=f.read().strip()
 f.close()
 cur.execute('select * from login where username =%s',[(username)])

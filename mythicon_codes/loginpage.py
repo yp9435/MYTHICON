@@ -67,12 +67,12 @@ pygame.mixer.init()# initialise the pygame
 pygame.mixer.music.load("mythicon_sounds/skyrain.wav")
 pygame.mixer.music.play(-1)
 #images
-bg_image = PhotoImage(file = "mythicon_images\peakpx.png")
-username_image=PhotoImage(file = "mythicon_images\uname.png")
-password_image=PhotoImage(file = "mythicon_images\pasword.png")
-login_image=PhotoImage(file = "mythicon_images\login.png")
-register_image=PhotoImage(file = "mythicon_images\register.png")
-loginpg_image=PhotoImage(file = "mythicon_images\loginpage.png")
+bg_image = PhotoImage(file = r"mythicon_images/peakpx.png")
+username_image=PhotoImage(file = r"mythicon_images/uname.png")
+password_image=PhotoImage(file = r"mythicon_images/pasword.png")
+login_image=PhotoImage(file = r"mythicon_images/login.png")
+register_image=PhotoImage(file = r"mythicon_images/register.png")
+loginpg_image=PhotoImage(file = r"mythicon_images/loginpage.png")
 #Show bg using canvas
 canvas.create_image(369.5,207.5,image=bg_image)
 #heading login page
